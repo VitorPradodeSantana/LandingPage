@@ -3,6 +3,7 @@
 :root {
   --cor-principal: #1e90ff;
   --amarelo-botao: #eeee00;
+  --azul-texto: #19197077;
 }
 
 * {
@@ -14,6 +15,27 @@
 .container {
   width: 1000px;
   margin: 0 auto;
+}
+
+/* ------------------------------------------- ESTILO GERAL ------------------------------------------- */
+
+button {
+  border: 0;
+  border-radius: 2px;
+
+  background-color: var(--amarelo-botao);
+  color: #fff;
+
+  text-transform: uppercase;
+  font-size: 'Montserrat', sans-serif;
+  font-weight: 600;
+
+  padding: 1em 2.6em;
+  cursor: pointer;
+}
+
+button > i {
+  padding-left: 20px;
 }
 
 /* ------------------------------------------- CABECALHO ------------------------------------------- */
@@ -63,7 +85,7 @@
 
 .principal .container {
   padding: 100px 80px;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,21 +101,88 @@
   color: #fff;
 }
 
-.principal button {
-  border: 0;
-  border-radius: 2px;
+.principal .icones {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 
-  background-color: var(--amarelo-botao);
-  color: #fff;
-
-  text-transform: uppercase;
-  font-size: 'Montserrat', sans-serif;
-  font-weight: 600;
-
-  padding: 1em 2.6em;
-  cursor: pointer;
+  padding: 8rem 0;
+  width: 100%;
 }
 
-.principal button > i {
-  padding-left: 20px;
+.principal .icone-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.principal .icone-central img {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.principal .icone-central span {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+  width: 50%;
+  margin-top: 0.5rem;
+}
+
+/* ------------------------------------------- PRINCIPAL ------------------------------------------- */
+#video {
+  background-color: #fffafa;
+}
+
+#video .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.descricao-video {
+  padding: 8rem 0;
+}
+
+.descricao-video a {
+  background-color: var(--cor-principal);
+  border-radius: 5px;
+  padding: 0.9rem 0.8rem;
+}
+
+.descricao-video a i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.descricao-video h4 {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 8rem;
+  color: #191970;
+
+  margin-bottom: 2rem;
+}
+
+.descricao-video p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  color: var(--azul-texto);
+
+  width: 80%;
+  margin-bottom: 8rem;
+}
+
+#video .video {
+  height: 800px;
+  margin-left: 0 !important;
+}
+
+#video .video img {
+  height: 100%;
+  margin-left: 0 !important;
+  box-sizing: border-box;
 }
