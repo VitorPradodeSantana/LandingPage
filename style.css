@@ -3,7 +3,12 @@
 :root {
   --cor-principal: #1e90ff;
   --amarelo-botao: #eeee00;
-  --azul-texto: #19197077;
+  --azul-texto: #0101489f;
+  --azul-titulo: #191970;
+  --cor-fundo: #fffafa;
+  --titulo-servicos: #00ced1;
+  --cor-linha-grid: #cdc9c971;
+  --background-teste-gratis: #00bfff;
 }
 
 * {
@@ -30,7 +35,7 @@ button {
   font-size: 'Montserrat', sans-serif;
   font-weight: 600;
 
-  padding: 1em 2.6em;
+  padding: 1em 2em 1em 2.6em;
   cursor: pointer;
 }
 
@@ -134,17 +139,18 @@ button > i {
 
 /* ------------------------------------------- PRINCIPAL ------------------------------------------- */
 #video {
-  background-color: #fffafa;
-}
+  background-color: var(--cor-fundo);
 
-#video .container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
 }
 
 .descricao-video {
-  padding: 8rem 0;
+  padding: 8rem 0rem;
+  justify-self: center;
+
+  margin-left: 250px;
 }
 
 .descricao-video a {
@@ -162,7 +168,7 @@ button > i {
   font-size: 2rem;
   font-family: 'Montserrat', sans-serif;
   margin-top: 8rem;
-  color: #191970;
+  color: var(--azul-titulo);
 
   margin-bottom: 2rem;
 }
@@ -178,11 +184,239 @@ button > i {
 
 #video .video {
   height: 800px;
-  margin-left: 0 !important;
+  margin-left: 0;
+
+  position: relative;
 }
 
-#video .video img {
+#video .video img:nth-child(1) {
+  position: absolute;
+  cursor: pointer;
+  right: 45%;
+  bottom: 50%;
+}
+
+#video .video img:nth-child(2) {
   height: 100%;
-  margin-left: 0 !important;
-  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ------------------------------------------- PRINCIPAL ------------------------------------------- */
+#solucoes {
+  background-color: var(--cor-fundo);
+}
+
+#solucoes header {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+#solucoes h4 {
+  width: 300px;
+  font-size: 2rem;
+  color: var(--azul-titulo);
+  margin: 0 auto;
+
+  line-height: 3rem;
+}
+
+#solucoes header div {
+  width: 400px;
+  margin: 0 auto;
+  color: var(--azul-texto);
+  padding-top: 1.5rem;
+  line-height: 1.5rem;
+}
+
+#solucoes .solucoes-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#solucoes .solucoes-container div {
+  border-top: 2px;
+  border-right: 1px;
+  border-left: 1px;
+  border-bottom: 2px;
+  border-style: solid;
+  border-color: var(--cor-linha-grid);
+
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  padding-left: 250px;
+}
+
+#solucoes .solucoes-container div p:nth-child(1) {
+  color: var(--titulo-servicos);
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#solucoes .row-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+#solucoes .row-2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+#solucoes .row-3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+#solucoes .row-4 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+#solucoes .row-5 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+#solucoes .row-6 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+#solucoes .solucoes-container div ul {
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--azul-texto);
+}
+
+#solucoes .solucoes-container div ul i {
+  color: var(--amarelo-botao);
+  margin-right: 1rem;
+}
+
+#solucoes .solucoes-container div p:nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+#solucoes .solucoes-container div p:nth-child(2) {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  width: 75%;
+}
+
+#solucoes .solucoes-container div ul li {
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------------------- RESULTADOS ------------------------------------------- */
+#resultados {
+  background-color: var(--background-teste-gratis);
+  padding: 5rem 250px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+#resultados p {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 2rem;
+  color: #fff;
+  width: 350px;
+  padding-bottom: 3rem;
+}
+
+#resultados span {
+  font-weight: bold;
+}
+
+#resultados button {
+  background-color: var(--background-teste-gratis);
+  border: 2px solid #fff;
+}
+
+#resultados img {
+  padding-left: 8rem;
+}
+
+/* -------------------------------------------DEPOIMENTOS  ------------------------------------------- */
+
+#depoimentos {
+  background-color: var(--cor-fundo);
+}
+
+#depoimentos h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--azul-titulo);
+  padding-top: 8rem;
+}
+
+#depoimentos > div {
+  border: 2px solid var(--cor-linha-grid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 4rem 5.5rem;
+  width: 700px;
+}
+
+#depoimentos > div .nome-depoimento {
+  color: var(--azul-titulo);
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#depoimentos > div span {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: var(--cor-principal);
+}
+
+#depoimentos > div .texto-depoimento {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--azul-texto);
+  font-size: 14px;
+  padding: 2rem 0;
+}
+
+#depoimentos .indicadores {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#depoimentos .indicadores div div {
+  display: flex;
+  align-items: center;
+}
+
+#depoimentos .indicadores div div i {
+  font-size: 12px;
+  margin-right: 5px;
 }
