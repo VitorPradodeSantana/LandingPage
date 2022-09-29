@@ -26,7 +26,7 @@
 
 button {
   border: 0;
-  border-radius: 2px;
+  border-radius: 4px;
 
   background-color: var(--amarelo-botao);
   color: #fff;
@@ -382,6 +382,26 @@ button > i {
 
   padding: 4rem 5.5rem;
   width: 700px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+#depoimentos > div .imagem {
+  position: relative;
+}
+
+#depoimentos > div img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  box-sizing: border-box;
+
+  border: 1px solid gray;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 25px;
+  right: -50px;
 }
 
 #depoimentos > div .nome-depoimento {
@@ -393,8 +413,12 @@ button > i {
 
 #depoimentos > div span {
   font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 12px;
   text-transform: uppercase;
   color: var(--cor-principal);
+
+  margin-top: 10px;
 }
 
 #depoimentos > div .texto-depoimento {
@@ -408,15 +432,49 @@ button > i {
 #depoimentos .indicadores {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  width: 550px;
+  margin: 0 auto;
+}
+
+#depoimentos .indicadores > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+}
+
+#depoimentos .indicadores div p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 #depoimentos .indicadores div div {
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 
 #depoimentos .indicadores div div i {
   font-size: 12px;
+  font-weight: bold;
   margin-right: 5px;
+  color: var(--background-teste-gratis);
+}
+
+#depoimentos .indicadores div div p {
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-principal);
+}
+
+#depoimentos .btn {
+  width: 600px;
+  border: none !important;
+  margin: 0 auto;
 }
