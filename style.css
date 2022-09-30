@@ -374,7 +374,6 @@ button > i {
   padding-top: 8rem;
 }
 
-
 #depoimentos .depoimento-item {
   border: 2px solid var(--cor-linha-grid);
   display: flex;
@@ -479,12 +478,17 @@ button > i {
   width: 600px;
   border: none !important;
   margin: 0 auto;
+  text-align: center;
+  padding: 4rem 0;
 }
 
 #depoimentos .swiper-wrapper div:nth-child(1) {
   display: flex;
 }
 
+#depoimentos .swiper-wrapper {
+  justify-content: center;
+}
 /* ------------------------------------------- TESTE GRÁTIS ------------------------------------------- */
 #teste {
   background: rgb(0, 199, 255);
