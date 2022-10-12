@@ -14,4 +14,4 @@ Estava procurando um projeto no qual pudesse exercer o conhecimento de CSS e pod
 acessando o BEHANCE dele e vi este projeto o qual me chamou atenção, pois não parecia ser tão complexo de ser feito porém estava bem bonito então a partir disso comecei
 a realizar este projeto
 
-
+![Imagem do projeto](./img/imagemProjeto.png)
