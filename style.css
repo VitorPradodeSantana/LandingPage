@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+body {
+  transition: 1s;
+}
+
 .container {
   width: 1000px;
   margin: 0 auto;
